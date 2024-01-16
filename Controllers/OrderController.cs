@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 using MyShoppingListApi.Models;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Cors;
 
 namespace MyShoppingListApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [EnableCors("AllowLocalhost3000")]
     public class OrdersController : ControllerBase
     {
         private readonly MyDbContext _context;
